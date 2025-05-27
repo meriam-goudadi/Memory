@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .card-container {
+    perspective: 1000px;
+  }
+
+  .card-inner {
+    transform-style: preserve-3d;
+  }
+
+  .card-face {
+    backface-visibility: hidden;
+  }
+
+  .card-front {
+    transform: rotateY(0deg);
+  }
+
+  .card-back {
+    transform: rotateY(180deg);
+  }
+
+  .flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .rotateY-0 {
+    transform: rotateY(0deg);
+  }
+
+  .rotateY-180 {
+    transform: rotateY(180deg);
+  }
+
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+}
